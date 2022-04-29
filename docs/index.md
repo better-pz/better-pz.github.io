@@ -1,6 +1,6 @@
 ---
 hero:
-  title: Better-Blog
+  title: Site Name
   desc: dumi site app example
   actions:
     - text: Getting Started

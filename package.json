@@ -25,5 +25,13 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.20.1",
+    "enquire-js": "^0.2.1",
+    "rc-queue-anim": "^2.0.0",
+    "rc-scroll-anim": "^2.7.6",
+    "rc-tween-one": "^3.0.6"
   }
 }

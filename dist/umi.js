@@ -1656,7 +1656,7 @@
               exact: !0,
               meta: {
                 filePath: 'docs/index.md',
-                updatedTime: 165121795e4,
+                updatedTime: 1651242366e3,
                 hero: {
                   title: 'Site Name',
                   desc: '<div class="markdown"><p>dumi site app example</p></div>',

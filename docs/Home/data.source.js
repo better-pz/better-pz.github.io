@@ -136,38 +136,38 @@ export const Banner10DataSource = {
           ),
         },
       },
-      {
-        name: 'elem1',
-        BannerElement: { className: 'banner-user-elem' },
-        textWrapper: { className: 'banner1-text-wrapper' },
-        bg: { className: 'bg bg1' },
-        title: {
-          className: 'banner1-title',
-          children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        },
-        content: {
-          className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
-        },
-        button: { className: 'banner1-button', children: 'Learn More' },
-      },
-      {
-        name: 'elem2',
-        BannerElement: { className: 'banner-user-elem' },
-        textWrapper: { className: 'banner1-text-wrapper' },
-        bg: { className: 'bg bg1' },
-        title: {
-          className: 'banner1-title',
-          children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        },
-        content: {
-          className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
-        },
-        button: { className: 'banner1-button', children: 'Learn More' },
-      },
+      // {
+      //   name: 'elem1',
+      //   BannerElement: { className: 'banner-user-elem' },
+      //   textWrapper: { className: 'banner1-text-wrapper' },
+      //   bg: { className: 'bg bg1' },
+      //   title: {
+      //     className: 'banner1-title',
+      //     children:
+      //       'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+      //   },
+      //   content: {
+      //     className: 'banner1-content',
+      //     children: '一个高效的页面动画解决方案',
+      //   },
+      //   button: { className: 'banner1-button', children: 'Learn More' },
+      // },
+      // {
+      //   name: 'elem2',
+      //   BannerElement: { className: 'banner-user-elem' },
+      //   textWrapper: { className: 'banner1-text-wrapper' },
+      //   bg: { className: 'bg bg1' },
+      //   title: {
+      //     className: 'banner1-title',
+      //     children:
+      //       'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+      //   },
+      //   content: {
+      //     className: 'banner1-content',
+      //     children: '一个高效的页面动画解决方案',
+      //   },
+      //   button: { className: 'banner1-button', children: 'Learn More' },
+      // },
     ],
   },
 };
@@ -548,9 +548,8 @@ export const Feature50DataSource = {
                   解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。解放业务及技术生产力，推动金融服务底层创新。
                 </p>
                 <br />
-                <h3>
-                  开放
-                </h3>符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
+                <h3>开放</h3>
+                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
               </span>
             ),
           },
@@ -588,9 +587,8 @@ export const Feature50DataSource = {
                   解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。解放业务及技术生产力，推动金融服务底层创新。
                 </p>
                 <br />
-                <h3>
-                  开放
-                </h3>符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
+                <h3>开放</h3>
+                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
               </span>
             ),
           },
@@ -628,9 +626,8 @@ export const Feature50DataSource = {
                   解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。解放业务及技术生产力，推动金融服务底层创新。
                 </p>
                 <br />
-                <h3>
-                  开放
-                </h3>符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
+                <h3>开放</h3>
+                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
               </span>
             ),
           },

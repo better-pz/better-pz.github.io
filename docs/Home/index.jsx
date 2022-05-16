@@ -59,48 +59,48 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-      <Nav3
-        id="Nav3_0"
-        key="Nav3_0"
-        dataSource={Nav30DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Nav3
+      //   id="Nav3_0"
+      //   key="Nav3_0"
+      //   dataSource={Nav30DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       <Banner1
         id="Banner1_0"
         key="Banner1_0"
         dataSource={Banner10DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Footer0
-        id="Footer0_1"
-        key="Footer0_1"
-        dataSource={Footer01DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Footer0
+      //   id="Footer0_1"
+      //   key="Footer0_1"
+      //   dataSource={Footer01DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       <Content9
         id="Content9_0"
         key="Content9_0"
         dataSource={Content90DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Feature3
-        id="Feature3_0"
-        key="Feature3_0"
-        dataSource={Feature30DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Feature3
+      //   id="Feature3_0"
+      //   key="Feature3_0"
+      //   dataSource={Feature30DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       <Feature5
         id="Feature5_0"
         key="Feature5_0"
         dataSource={Feature50DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Feature4
-        id="Feature4_0"
-        key="Feature4_0"
-        dataSource={Feature40DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Feature4
+      //   id="Feature4_0"
+      //   key="Feature4_0"
+      //   dataSource={Feature40DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       <Footer0
         id="Footer0_2"
         key="Footer0_2"

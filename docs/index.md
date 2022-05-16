@@ -1,4 +1,4 @@
-<!-- ---
+---
 hero:
   title: Better
   desc: Better的个人博客
@@ -18,9 +18,10 @@ features:
 footer: Powered by Better
 ---
 
-## Hello Better! -->
----
+## Hello Better!
+
+<!-- ---
 gapless: true
 ---
 
-<code src="./Home/index.jsx" inline />
+<code src="./Home/index.jsx"  /> -->

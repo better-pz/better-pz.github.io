@@ -29,6 +29,9 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
+    "@ant-design/compatible": "^1.1.0",
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.20.5",
     "umi": "^3.5.23"
   }
 }

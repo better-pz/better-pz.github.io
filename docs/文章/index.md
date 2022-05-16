@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 快速上手
+  title: 文章
   order: 1
 ---
 

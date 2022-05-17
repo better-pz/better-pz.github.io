@@ -36,6 +36,6 @@
     "rc-banner-anim": "^2.4.5",
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",
-    "umi": "^3.5.23"
+    "umi": "^3.3.9"
   }
 }

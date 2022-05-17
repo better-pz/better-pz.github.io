@@ -3,22 +3,22 @@
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
 
-import Nav3 from './Nav3';
+// import Nav3 from './Nav3';
 import Banner1 from './Banner1';
 import Footer0 from './Footer0';
 import Content9 from './Content9';
-import Feature3 from './Feature3';
+// import Feature3 from './Feature3';
 import Feature5 from './Feature5';
-import Feature4 from './Feature4';
+// import Feature4 from './Feature4';
 
 import {
-  Nav30DataSource,
+  // Nav30DataSource,
   Banner10DataSource,
-  Footer01DataSource,
+  // Footer01DataSource,
   Content90DataSource,
-  Feature30DataSource,
+  // Feature30DataSource,
   Feature50DataSource,
-  Feature40DataSource,
+  // Feature40DataSource,
   Footer02DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
@@ -89,12 +89,12 @@ export default class Home extends React.Component {
       //   dataSource={Feature30DataSource}
       //   isMobile={this.state.isMobile}
       // />,
-      <Feature5
-        id="Feature5_0"
-        key="Feature5_0"
-        dataSource={Feature50DataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Feature5
+      //   id="Feature5_0"
+      //   key="Feature5_0"
+      //   dataSource={Feature50DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
       // <Feature4
       //   id="Feature4_0"
       //   key="Feature4_0"

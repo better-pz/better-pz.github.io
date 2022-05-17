@@ -1,19 +1,24 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Link } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import BannerAnim, { Element } from 'rc-banner-anim';
 import { isImg } from './utils';
 import 'rc-banner-anim/assets/index.css';
-
+import { history } from 'umi';
 const { BgElement } = Element;
 class Banner extends React.PureComponent {
+  start = () => {
+    // 跳转到指定路由
+    history.push('/文章');
+  };
   render() {
     const { ...props } = this.props;
     const { dataSource } = props;
     delete props.dataSource;
     delete props.isMobile;
+
     const childrenToRender = dataSource.BannerAnim.children.map((item, i) => {
       const elem = item.BannerElement;
       const elemClassName = elem.className;
@@ -39,9 +44,15 @@ class Banner extends React.PureComponent {
             <div key="content" {...content}>
               {content.children}
             </div>
-            <Button ghost key="button" {...button}>
-              {button.children}
-            </Button>
+            <Button
+              ghost
+              key="button"
+              {...button}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                this.start();
+              }}
+            ></Button>
           </QueueAnim>
         </Element>
       );

@@ -1,103 +1,103 @@
 import React from 'react';
-export const Nav30DataSource = {
-  wrapper: { className: 'header3 home-page-wrapper' },
-  page: { className: 'home-page' },
-  logo: {
-    className: 'header3-logo',
-    children:
-      'https://gw.alipayobjects.com/zos/basement_prod/b30cdc2a-d91c-4c78-be9c-7c63b308d4b3.svg',
-  },
-  Menu: {
-    className: 'header3-menu',
-    children: [
-      {
-        name: 'item0',
-        className: 'header3-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航一', name: 'text' }],
-        },
-        subItem: [
-          {
-            name: 'sub0',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'Ant Design',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: '企业级 UI 设计体系',
-                },
-              ],
-            },
-          },
-          {
-            name: 'sub1',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'Ant Design',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: '企业级 UI 设计体系',
-                },
-              ],
-            },
-          },
-        ],
-      },
-      {
-        name: 'item1',
-        className: 'header3-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航二', name: 'text' }],
-        },
-      },
-      {
-        name: 'item2',
-        className: 'header3-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航三', name: 'text' }],
-        },
-      },
-      {
-        name: 'item3',
-        className: 'header3-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航四', name: 'text' }],
-        },
-      },
-    ],
-  },
-  mobileMenu: { className: 'header3-mobile-menu' },
-};
+// export const Nav30DataSource = {
+//   wrapper: { className: 'header3 home-page-wrapper' },
+//   page: { className: 'home-page' },
+//   logo: {
+//     className: 'header3-logo',
+//     children:
+//       'https://gw.alipayobjects.com/zos/basement_prod/b30cdc2a-d91c-4c78-be9c-7c63b308d4b3.svg',
+//   },
+//   Menu: {
+//     className: 'header3-menu',
+//     children: [
+//       {
+//         name: 'item0',
+//         className: 'header3-item',
+//         children: {
+//           href: '#',
+//           children: [{ children: '导航一', name: 'text' }],
+//         },
+//         subItem: [
+//           {
+//             name: 'sub0',
+//             className: 'item-sub',
+//             children: {
+//               className: 'item-sub-item',
+//               children: [
+//                 {
+//                   name: 'image0',
+//                   className: 'item-image',
+//                   children:
+//                     'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+//                 },
+//                 {
+//                   name: 'title',
+//                   className: 'item-title',
+//                   children: 'Ant Design',
+//                 },
+//                 {
+//                   name: 'content',
+//                   className: 'item-content',
+//                   children: '企业级 UI 设计体系',
+//                 },
+//               ],
+//             },
+//           },
+//           {
+//             name: 'sub1',
+//             className: 'item-sub',
+//             children: {
+//               className: 'item-sub-item',
+//               children: [
+//                 {
+//                   name: 'image0',
+//                   className: 'item-image',
+//                   children:
+//                     'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+//                 },
+//                 {
+//                   name: 'title',
+//                   className: 'item-title',
+//                   children: 'Ant Design',
+//                 },
+//                 {
+//                   name: 'content',
+//                   className: 'item-content',
+//                   children: '企业级 UI 设计体系',
+//                 },
+//               ],
+//             },
+//           },
+//         ],
+//       },
+//       {
+//         name: 'item1',
+//         className: 'header3-item',
+//         children: {
+//           href: '#',
+//           children: [{ children: '导航二', name: 'text' }],
+//         },
+//       },
+//       {
+//         name: 'item2',
+//         className: 'header3-item',
+//         children: {
+//           href: '#',
+//           children: [{ children: '导航三', name: 'text' }],
+//         },
+//       },
+//       {
+//         name: 'item3',
+//         className: 'header3-item',
+//         children: {
+//           href: '#',
+//           children: [{ children: '导航四', name: 'text' }],
+//         },
+//       },
+//     ],
+//   },
+//   mobileMenu: { className: 'header3-mobile-menu' },
+// };
 export const Banner10DataSource = {
   wrapper: { className: 'banner1' },
   BannerAnim: {
@@ -108,14 +108,12 @@ export const Banner10DataSource = {
         textWrapper: { className: 'banner1-text-wrapper' },
         bg: { className: 'bg bg0' },
         title: {
-          className: 'banner1-title',
+          className: '',
           children: (
-            <span>
-              <span>
-                <b>
-                  <i>Better</i>
-                </b>
-              </span>
+            <span style={{ fontSize: '50px' }}>
+              <b>
+                <i>Better PZ</i>
+              </b>
             </span>
           ),
         },
@@ -123,17 +121,17 @@ export const Banner10DataSource = {
           className: 'banner1-content',
           children: (
             <span>
-              <p>个人学习总结的博客</p>
+              <p>Better的学习总结的个人网站</p>
+              <p>不断学习，坚持分享</p>
+              <p>
+                明明抱着一腔热情在写代码却被身边的人说卷，难道做喜欢的事情也是错的吗？
+              </p>
             </span>
           ),
         },
         button: {
           className: 'banner1-button l38pyypo1hh-editor_css',
-          children: (
-            <span>
-              <p>开始阅读</p>
-            </span>
-          ),
+          children: <a>开始阅读</a>,
         },
       },
       // {
@@ -283,19 +281,15 @@ export const Content90DataSource = {
             children:
               'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
           },
-          name: { className: 'block-name', children: '姓名' },
-          post: { className: 'block-post', children: '公司 职位' },
-          time: { className: 'block-time', children: '09:00 - 10:00' },
-          title: { className: 'block-title', children: '演示标题 - XYZ' },
+          name: { className: 'block-name', children: '文章分类' },
+          post: { className: 'block-post', children: 'JavaScript' },
+          time: { className: 'block-time', children: ' ' },
+          title: { className: 'block-title', children: '简介' },
           content: {
             className: 'block-content',
             children: (
               <span>
-                <p>
-                  经过近 3
-                  年的打磨，在助力中台产品研发效能提升的目标之上，包含设计语言、UI
-                  资产、可视化以及产品体验相关的蚂蚁中台设计体系正在逐步成型。此次分享包含两部分，在介绍蚂蚁设计体系的同时，也会和大家分享我们在设计语言的部分探索。
-                </p>
+                <p>对js的重点难点进行总结</p>
               </span>
             ),
           },
@@ -318,14 +312,17 @@ export const Content90DataSource = {
             children:
               'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
           },
-          name: { className: 'block-name', children: '姓名' },
-          post: { className: 'block-post', children: '公司 职位' },
-          time: { className: 'block-time', children: '09:00 - 10:00' },
-          title: { className: 'block-title', children: '演示标题 - XYZ' },
+          name: { className: 'block-name', children: '文章分类' },
+          post: { className: 'block-post', children: 'Vue' },
+          time: { className: 'block-time', children: ' ' },
+          title: { className: 'block-title', children: '简介' },
           content: {
             className: 'block-content',
-            children:
-              '经过近 3 年的打磨，在助力中台产品研发效能提升的目标之上，包含设计语言、UI 资产、可视化以及产品体验相关的蚂蚁中台设计体系正在逐步成型。此次分享包含两部分，在介绍蚂蚁设计体系的同时，也会和大家分享我们在设计语言的部分探索。',
+            children: (
+              <span>
+                <p>对Vue的重点难点进行总结</p>
+              </span>
+            ),
           },
         },
       },
@@ -344,16 +341,19 @@ export const Content90DataSource = {
           icon: {
             className: 'block-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
+              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
           },
-          name: { className: 'block-name', children: '姓名' },
-          post: { className: 'block-post', children: '公司 职位' },
-          time: { className: 'block-time', children: '09:00 - 10:00' },
-          title: { className: 'block-title', children: '演示标题 - XYZ' },
+          name: { className: 'block-name', children: '文章分类' },
+          post: { className: 'block-post', children: '计算结网络' },
+          time: { className: 'block-time', children: ' ' },
+          title: { className: 'block-title', children: '简介' },
           content: {
             className: 'block-content',
-            children:
-              '经过近 3 年的打磨，在助力中台产品研发效能提升的目标之上，包含设计语言、UI 资产、可视化以及产品体验相关的蚂蚁中台设计体系正在逐步成型。此次分享包含两部分，在介绍蚂蚁设计体系的同时，也会和大家分享我们在设计语言的部分探索。',
+            children: (
+              <span>
+                <p>对计算机网络 的重点难点进行总结</p>
+              </span>
+            ),
           },
         },
       },

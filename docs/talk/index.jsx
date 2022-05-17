@@ -7,7 +7,7 @@ const Talk = () => {
       <GitalkComponent
         options={{
           clientID: 'e23b1b425c6f9c6c7e5e',
-          clientSecret: '7ce70e4829d52d6ea7890962dc240ad7ee558d79',
+          clientSecret: '08075cddecc2e973a232a5e6c32fed694481e9de',
           repo: 'better-pz.github.io',
           owner: 'better-pz',
           admin: ['better-pz'],

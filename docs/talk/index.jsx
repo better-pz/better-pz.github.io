@@ -1,6 +1,7 @@
 import React from 'react';
 import GitalkComponent from 'gitalk/dist/gitalk-component';
 const Talk = () => {
+  let title = location.pathname.substr(0, 50);
   return (
     <>
       <GitalkComponent
@@ -10,7 +11,7 @@ const Talk = () => {
           repo: 'better-pz.github.io',
           owner: 'better-pz',
           admin: ['better-pz'],
-          id: location.pathname, // Ensure uniqueness and length less than 50
+          id: title, // Ensure uniqueness and length less than 50
           distractionFreeMode: false, // Facebook-like distraction free mode
         }}
       ></GitalkComponent>

@@ -7,7 +7,7 @@ const Talk = () => {
         options={{
           clientID: 'e23b1b425c6f9c6c7e5e',
           clientSecret: '7ce70e4829d52d6ea7890962dc240ad7ee558d79',
-          repo: 'leet-code',
+          repo: 'better-pz.github.io',
           owner: 'better-pz',
           admin: ['better-pz'],
           id: location.pathname, // Ensure uniqueness and length less than 50

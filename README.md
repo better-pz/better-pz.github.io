@@ -1,4 +1,6 @@
-# dumi app
+# Better Blog
+
+快速搭建一个个人文档
 
 ## Getting Started
 

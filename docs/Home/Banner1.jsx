@@ -11,7 +11,7 @@ const { BgElement } = Element;
 class Banner extends React.PureComponent {
   start = () => {
     // 跳转到指定路由
-    history.push('/java-script');
+    history.push('/js文章合辑');
   };
   render() {
     const { ...props } = this.props;

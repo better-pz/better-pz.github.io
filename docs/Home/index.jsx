@@ -7,18 +7,17 @@ import { enquireScreen } from 'enquire-js';
 import Banner1 from './Banner1';
 import Footer0 from './Footer0';
 import Content9 from './Content9';
-// import Feature3 from './Feature3';
+import Feature3 from './Feature3';
 import Feature5 from './Feature5';
-// import Feature4 from './Feature4';
+import Feature4 from './Feature4';
 
 import {
   // Nav30DataSource,
   Banner10DataSource,
-  // Footer01DataSource,
   Content90DataSource,
-  // Feature30DataSource,
+  Feature30DataSource,
   Feature50DataSource,
-  // Feature40DataSource,
+  Feature40DataSource,
   Footer02DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';

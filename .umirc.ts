@@ -5,6 +5,7 @@ export default defineConfig({
   mode: 'site',
   locales: [['zh-CN', '中文']],
   logo: '/images/logoMini.png',
+  favicon: '/images/favicon.ico',
   navs: [
     null, // null 值代表保留约定式生成的导航，只做增量配置
     {

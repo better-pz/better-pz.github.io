@@ -40,5 +40,11 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "umi": "^3.3.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-pz/better-pz.github.io.git",
+    "branch": "master",
+    "platform": "github"
   }
 }

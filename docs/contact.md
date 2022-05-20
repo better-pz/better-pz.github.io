@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 联系我
+  title: 留言板
 
 gapless: true
 ---

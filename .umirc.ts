@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'Better Blog',
+  title: '程序员Better',
   mode: 'site',
   locales: [['zh-CN', '中文']],
   logo: '/images/logoMini.png',

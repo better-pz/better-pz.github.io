@@ -552,5 +552,7 @@ render (h) {
 ## 普通 Dom 元素怎么渲染到页面
 
 1. 执行$mount
-   1. 实际执行 mountComponent
-   2. 实例化一个 Wather
+   1. 实际执行 `mountComponent`
+   2. 实例化一个 `Wather`
+   3. `Watcher`中会执行 get 方法,触发`updateComponent`
+2. 执

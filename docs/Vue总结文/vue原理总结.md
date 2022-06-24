@@ -1,4 +1,6 @@
-# 描述 Vue 与 React 区别
+# vue 原理总结
+
+## 描述 Vue 与 React 区别
 
 说明概念:
 vue:是一套用于构建用户界面的**渐进式框架**,Vue 的核心库只关注视图层
@@ -21,11 +23,11 @@ react:用于构建用户界面的 JavaScript 库 声明式, 组件化
    vue 官方提供
    React 第三方提供,自己选择
 
-# 描述 vue 的响应式原理
+## 描述 vue 的响应式原理
 
 ![impicture_20220320_171230.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fdfa92e3d31452fac5fdc10e92067c6~tplv-k3u1fbpfcp-watermark.image?)
 
-## Vue 的三个核心类
+### Vue 的三个核心类
 
 1. `Observer` :给对象的属性添加 getter 和 setter ,用于**依赖收集**和**派发更新**
 2. `Dep` :用于收集当前响应式对象的依赖关系,每个响应式对象都有 dep 实例,`dep.subs = watcher[]`,当数据发生变更的时候,会通过`dep.notify()`通知各个 watcher
@@ -52,29 +54,29 @@ react:用于构建用户界面的 JavaScript 库 声明式, 组件化
    setter:派发更新
    每个组件的实例都有对应的 watcher 实例
 
-# 计算属性的原理
+## 计算属性的原理
 
 computed watcher 计算属性的监听器,格式化转换,求值等操作
 
 computed watcher 持有一个 dep 实例,通过 dirty 属性标记计算属性是否需要重新求值
 当 computed 依赖值改变后,就会通知订阅的 watcher 进行更新,对于 computed watcher 会将 dirty 属性设置为 true,并且进行计算属性方法的调用,
 
-## 注意
+### 注意
 
 1. 计算属性是基于他的响应式依赖进行缓存的,只有依赖发生改变的时候才会重新求值
 2. 意义:比如计算属性方法内部操作非常频繁时,遍历一个极大的数组,计算一次可能要耗时 1s,如果依赖值没有变化的时候就不会重新计算
 
-# nextTick 原理
+## nextTick 原理
 
-## 概念
+**概念**
 
 nextTick 的作用是在下一次 DOM 更新循环结束后,执行延迟回调,nextTick 就是创建一个异步任务,要他等到同步任务执行完后才执行
 
-## 使用
+**使用**
 
 在数据变化后要执行某个操作,而这个操作依赖因数据的改变而改变 dom,这个操作应该放到 nextTick 中
 
-## vue2
+### vue2 中的实现
 
 ```js
 <template>
@@ -101,7 +103,7 @@ export default {
 
 我们发现直接获取最新的 DOM 相关的信息是拿不到的,只有在 nextTick 中才能获取罪行的 DOM 信息
 
-### 原理分析
+#### 原理分析
 
 在执行 this.name = 'better' 会触发 Watcher 更新, Watcher 会把自己放到一个队列,然后调用 nextTick()函数
 
@@ -121,7 +123,7 @@ export function queueWatcher (watcher: Watcher) {
 也就是在执行 this.name = 'better'的时候,任务队列可以理解为[flushSchedulerQueue],然后在下一行的 console.log,由于会更新视图任务`flushSchedulerQueue`在任务队列中没有执行,所以无法拿到更后的视图
 然后在执行 this.$nextTick(fn)的时候,添加一个异步任务,这时的任务队列可以理解为[flushSchedulerQueue, fn], 然后同步任务执行完了,接着按顺序执行任务队列里的任务, 第一个任务执行就会更新视图,后面自然能得到更新后的视图了
 
-### nextTick 源码
+#### nextTick 源码
 
 源码分为两个部分:一个是判断当前环境能使用的最合适的 API 并保存异步函数,二是调用异步函数执行回调队列
 **1 环境判断**
@@ -239,7 +241,7 @@ export function nextTick(cb?: Function, ctx?: Object) {
 this.$nextTick().then(()=>{ ... })
 ```
 
-## vue3
+### vue3 中分析
 
 点击按钮更新 DOM 内容, 并获取最新的 DOM 内容
 
@@ -265,7 +267,7 @@ this.$nextTick().then(()=>{ ... })
 
 在使用方式上面有了一些变化,事件循环的原理还是一样的,只是加了几个专门维护队列的方法,以及关联到 effect
 
-### vue3 nextTick 源码剖析
+#### vue3 nextTick 源码剖析
 
 ```js
 const resolvedPromise: Promise<any> = Promise.resolve();
@@ -295,11 +297,11 @@ nextTick 接受一个函数为参数,同时会创建一个微任务,在我们页
 - 执行后置队列任务
 - 如果还有就递归继续执行
 
-# vue Router
+## vue Router
 
 路由就是一组 key-value 的对应关系,在前端项目中说的路由可以理解为 url-视图之间的映射关系,这种映射是单向的,url 变化不会走 http 请求,但是会更新切换前端 UI 视图,像 vue 这种单页面应用 就是这样的规则.
 
-## 路由守卫
+### 路由守卫
 
 1. 全局路由守卫
 
@@ -365,7 +367,7 @@ beforeRouteLeave (to, from, next) {
 }
 ```
 
-## 完整的导航解析过程
+### 完整的导航解析过程
 
 1.  导航被触发。
 2.  在失活的组件里调用  `beforeRouteLeave`  守卫。
@@ -380,7 +382,7 @@ beforeRouteLeave (to, from, next) {
 11. 触发 DOM 更新。
 12. 调用  `beforeRouteEnter`  守卫中传给  `next`  的回调函数，创建好的组件实例会作为回调函数的参数传入。
 
-## 路由模式
+### 路由模式
 
 1. history 模式 `/`:
    使用`pushState`和`replaceState`,通过这两个 API 可以改变 url 地址不发生请求,`popState`事件
@@ -389,9 +391,9 @@ beforeRouteLeave (to, from, next) {
 
    hash 是 URL 中 hash(#)及后面的那部分,常用作锚点在页面内进行导航,改变 hash 值不会随着 http 请求发送给服务器,通过`hashChange`事件监听 URL 的变化,可以用他来实现更新页面部分内容的操作
 
-## vueRouter 的实现
+### vueRouter 的实现
 
-### 剖析 VueRouter 本质
+#### 剖析 VueRouter 本质
 
 通过使用 vueRouter 可以知道
 
@@ -412,7 +414,7 @@ VueRouter.install = function () {};
 export default VueRouter;
 ```
 
-### 分析 Vue.use
+#### 分析 Vue.use
 
 Vue.use(plugin)
 用法:
@@ -513,3 +515,42 @@ createMap(routes) {
 ```
 
 [手写 vueRouter](https://juejin.cn/post/6854573222231605256)
+
+## 整个 new Vue 阶段做了什么？
+
+1. 执行`init`操作,包括且不限制`initLifecycle` 、`initState` 等
+2. 执行`mount` 进行元素挂载
+3. `compiler`步骤
+
+- compiler 步骤对 template 属性进行编译,生成`render`函数
+- 一般在项目中是.vue 文件开发,通过 vue-loader 处理生成 render 函数
+
+4. 执行 render,生成 vnode
+
+render 例子:
+
+```js
+<div id="app">{{ message }}</div>
+```
+
+对应的 render 函数
+
+```js
+render (h) {
+  return h('div' , {
+    attrs: {
+      id:'app'
+    },
+  },this.message)
+}
+```
+
+5. patch ,新旧 vnode 经过 diff 之后,渲染到真实 dom 上
+
+[](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b78369434e684d36a68b9118abc2bff1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp?)
+
+## 普通 Dom 元素怎么渲染到页面
+
+1. 执行$mount
+   1. 实际执行 mountComponent
+   2. 实例化一个 Wather

@@ -23,6 +23,10 @@ react:用于构建用户界面的 JavaScript 库 声明式, 组件化
    vue 官方提供
    React 第三方提供,自己选择
 
+#
+
+**整体过程**
+
 ## 描述 vue 的响应式原理
 
 ![impicture_20220320_171230.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fdfa92e3d31452fac5fdc10e92067c6~tplv-k3u1fbpfcp-watermark.image?)
@@ -518,36 +522,28 @@ createMap(routes) {
 
 ## 整个 new Vue 阶段做了什么？
 
-1. 执行`init`操作,包括且不限制`initLifecycle` 、`initState` 等
-2. 执行`mount` 进行元素挂载
-3. `compiler`步骤
+1. vue.prototype.\_init(option)
+2. initState(vm)
+3. Observer(vm.data)
+4. new Observer(data)
 
-- compiler 步骤对 template 属性进行编译,生成`render`函数
-- 一般在项目中是.vue 文件开发,通过 vue-loader 处理生成 render 函数
+5. 调用 walk 方法,遍历 data 中的每个属性,监听数据的变化
 
-4. 执行 render,生成 vnode
+6. 执行 defineProperty 监听数据读取和设置
 
-render 例子:
+数据描述符绑定完成后,我们就能得到以下的流程图
 
-```js
-<div id="app">{{ message }}</div>
-```
-
-对应的 render 函数
-
-```js
-render (h) {
-  return h('div' , {
-    attrs: {
-      id:'app'
-    },
-  },this.message)
-}
-```
-
-5. patch ,新旧 vnode 经过 diff 之后,渲染到真实 dom 上
+![](https://s.poetries.work/gitee/2020/08/vue/48.png)
 
 [](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b78369434e684d36a68b9118abc2bff1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp?)
+
+## vue 模板编译的原理
+
+vue 中模板 template 无法被浏览器解析并渲染,因为这不属于浏览器的标准,不是争取的 html 语法,所有需要将 template 转换成一个 JavaScript 函数,这样浏览器就可以执行这一个函数并渲染出对应的 html 元素,就可以让视图跑起来了,这个过程就叫做模板编译。模板编译又分为三个阶段，解析`parse`, 优化`optimize`, 生成`generate`,最终生成可执行函数`render`
+
+- **解析阶段** : 使用大量的正则表达式对 template 字符串进行解析,将标签,指令,属性等转化为抽象语法说 AST
+- **优化阶段**: 遍历 AST,找打其中的一些静态节点进行标记, 方便在页面重渲染的时候进行 diff 比较时,直接跳过这些静态节点,优化 runtime 的性能
+- **生成阶段**: 将最终的 AST 转化为 render 函数字符串
 
 ## 普通 Dom 元素怎么渲染到页面
 

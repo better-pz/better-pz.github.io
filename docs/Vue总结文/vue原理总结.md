@@ -23,9 +23,54 @@ react:用于构建用户界面的 JavaScript 库 声明式, 组件化
    vue 官方提供
    React 第三方提供,自己选择
 
-#
+## 整个 new Vue 阶段做了什么？
 
-**整体过程**
+1. vue.prototype.\_init(option)
+2. initState(vm)
+3. Observer(vm.data)
+4. new Observer(data)
+
+5. 调用 walk 方法,遍历 data 中的每个属性,监听数据的变化
+
+6. 执行 defineProperty 监听数据读取和设置
+
+数据描述符绑定完成后,我们就能得到以下的流程图
+
+![](https://s.poetries.work/gitee/2020/08/vue/48.png)
+
+[](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b78369434e684d36a68b9118abc2bff1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp?)
+
+- 图中我们可以看出,vue 初始化的时候,进行了数据的 get\set 绑定,并创建了一个
+- dep 对象就是用来依赖收集, 他实现了一个发布订阅模式,完后了数据 data 的渲染视图 watcher 的订阅
+
+```js
+class Dep {
+  // 根据 ts 类型提示，我们可以得出 Dep.target 是一个 Watcher 类型。
+  static target: ?Watcher;
+  // subs 存放搜集到的 Watcher 对象集合
+  subs: Array<Watcher>;
+  constructor() {
+    this.subs = [];
+  }
+  addSub(sub: Watcher) {
+    // 搜集所有使用到这个 data 的 Watcher 对象。
+    this.subs.push(sub);
+  }
+  depend() {
+    if (Dep.target) {
+      // 搜集依赖，最终会调用上面的 addSub 方法
+      Dep.target.addDep(this);
+    }
+  }
+  notify() {
+    const subs = this.subs.slice();
+    for (let i = 0, l = subs.length; i < l; i++) {
+      // 调用对应的 Watcher，更新视图
+      subs[i].update();
+    }
+  }
+}
+```
 
 ## 描述 vue 的响应式原理
 
@@ -453,7 +498,7 @@ VueRouter.install = function (v) {
 export default VueRouter;
 ```
 
-install 一般是给每个 vue 实例添加东西的,路由中就是添加$router和$route,注意:每个组件添加的$router是同一个和$route 是同一个,避免只是根组件有这个 router 值,使用代理的思想
+`install` 一般是给每个 vue 实例添加东西的,路由中就是添加`$router`和`$route`,注意:每个组件添加的`$router`是同一个和`$route` 是同一个,避免只是根组件有这个 router 值,使用代理的思想
 
 ```js
 //myVueRouter.js
@@ -519,23 +564,6 @@ createMap(routes) {
 ```
 
 [手写 vueRouter](https://juejin.cn/post/6854573222231605256)
-
-## 整个 new Vue 阶段做了什么？
-
-1. vue.prototype.\_init(option)
-2. initState(vm)
-3. Observer(vm.data)
-4. new Observer(data)
-
-5. 调用 walk 方法,遍历 data 中的每个属性,监听数据的变化
-
-6. 执行 defineProperty 监听数据读取和设置
-
-数据描述符绑定完成后,我们就能得到以下的流程图
-
-![](https://s.poetries.work/gitee/2020/08/vue/48.png)
-
-[](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b78369434e684d36a68b9118abc2bff1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp?)
 
 ## vue 模板编译的原理
 

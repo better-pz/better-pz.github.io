@@ -48,7 +48,20 @@ cookie 是用来维护用户信息的,而域名下所有的请求都狐疑携带
 
 - http 中的 cookie 是明文传输的,要使用 https 解决安全的问题
 
-### 5. cookie 与安全
+### 5. cookie 属性
+
+- name
+  Cookie 的名字,cookie 一旦创建,名称便不可更改
+- value
+- comment
+- domain
+- maxAge
+- path
+- secure
+- version
+- isHttpOnly
+
+### 6. cookie 与安全
 
 | 属性      | 作用                                                         |
 | --------- | ------------------------------------------------------------ |
@@ -58,3 +71,11 @@ cookie 是用来维护用户信息的,而域名下所有的请求都狐疑携带
 | same-site | 规定浏览器不能再跨域请求中携带 cookie，减少 csrf 攻击        |
 
 http-only 不支持读写,浏览器不允许脚本操作 document.cookie 去更改 coolkie 所以为避免跨域脚本 xss 攻击,通过 JavaScript 的 document.cookie API 无法访问带有 httpponly 标记的 cookie,他们只应该发送给服务端,如果包含服务端 session 信息的 cookie 不想被客户端 JavaScript 脚本调用,那么就应该为其设置 HTTPOnly 标记
+
+```js
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
+
+标记为 secure 的 cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端,但即便设 secure 标记,敏感信息也不应该通过 cookie 传输,因为 cookie 有其固有的不安全性,secure 标记也无法提供确实的安全保障
+
+为了弥补 cookie 的局限性,

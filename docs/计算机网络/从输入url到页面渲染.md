@@ -1,3 +1,11 @@
+<script src="https://beaudar.lipk.org/client.js"
+        repo="https://github.com/better-pz/better-pz.github.io.git"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 # 从输入 URL 到页面展现中间发生了这些!
 
 这个问题真的是个老生常谈的问题,作为一个前端或者后端都应该熟记于心,这个过程可以说的很粗糙,也可以详谈,其中展现了许多网络相关的知识点,于是必须要好好整理下

@@ -4,7 +4,8 @@ const Talk = () => {
   let title = location.pathname.substr(0, 50);
   return (
     <>
-      <GitalkComponent
+      请到博客或github中留言哦
+      {/* <GitalkComponent
         options={{
           clientID: 'e23b1b425c6f9c6c7e5e',
           clientSecret: '08075cddecc2e973a232a5e6c32fed694481e9de',
@@ -14,7 +15,7 @@ const Talk = () => {
           id: title, // Ensure uniqueness and length less than 50
           distractionFreeMode: false, // Facebook-like distraction free mode
         }}
-      ></GitalkComponent>
+      ></GitalkComponent> */}
     </>
   );
 };

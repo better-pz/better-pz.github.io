@@ -1,0 +1,21 @@
+# 常用工具与网站总结
+
+- 前端进阶之旅:https://interview2.poetries.top/
+- 网易云音乐 API:https://binaryify.github.io/NeteaseCloudMusicApi/#/
+- 在线学习资料(飞书):https://bytedance.feishu.cn/base/app8Ok6k9qafpMkgyRbfgxeEnet?table=tblEnSV2PNAajtWE&view=vewJHSwJVd
+- 在线学习资料(语雀):https://www.yuque.com/cuggz/interview
+- 算法小炒:https://labuladong.gitee.io/algo/1/3/
+- 代码随想录：https://programmercarl.com/
+- H5 在线低代码平台：http://x.dooring.cn/editor/home
+- 前端学习宝典：https://fe.ecool.fun/
+- 企业题库：https://codetop.cc/login
+- 剑指 offer：http://febook.hzfe.org/awesome-interview/
+- 低代码表单设计器：https://form.making.link/v3/sample/#/
+- 现代 js 教程:https://zh.javascript.info/
+- 印记中文:https://docschina.org/
+- 前端机器学习：https://alibaba.github.io/pipcook/#/zh-cn/
+- 画图:https://excalidraw.com/
+- 命名：https://unbug.github.io/codelf/
+- emo 表情:https://emojipedia.org/
+- 修图:https://www.photopea.com/
+- 多端文章美化适应:https://mdnice.com/

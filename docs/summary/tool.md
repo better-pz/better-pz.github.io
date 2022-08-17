@@ -19,3 +19,8 @@
 - emo 表情:https://emojipedia.org/
 - 修图:https://www.photopea.com/
 - 多端文章美化适应:https://mdnice.com/
+- 音乐播放器:http://listen1.github.io/listen1/
+- 流程图绘制：https://www.processon.com/diagrams
+- 快导航：https://www.hifast.cn/
+- 程序员资源集:https://yinman.youyacao.com/
+- 导航页面:https://go.itab.link/

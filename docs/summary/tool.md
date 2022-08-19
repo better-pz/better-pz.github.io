@@ -24,3 +24,4 @@
 - 快导航：https://www.hifast.cn/
 - 程序员资源集:https://yinman.youyacao.com/
 - 导航页面:https://go.itab.link/
+- https://www.youtube.com/watch?v=_wBWXZ41Keo
